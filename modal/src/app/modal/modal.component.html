@@ -1,0 +1,7 @@
+<button (click)="aparecer()"> modal </button>
+<ng-container *ngIf="mostrar">
+  <div class="modal">
+    <app-modal>ao inves de um dentro do outro, são infinitos dentro dos outros</app-modal> 
+    <ng-content></ng-content>
+  </div>
+</ng-container>
