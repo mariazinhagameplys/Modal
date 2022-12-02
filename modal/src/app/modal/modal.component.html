@@ -1,7 +1,13 @@
 <button (click)="aparecer()"> modal </button>
 <ng-container *ngIf="mostrar">
   <div class="modal">
-    <app-modal>ao inves de um dentro do outro, são infinitos dentro dos outros</app-modal> 
+    <app-modal>
+    <select [(ngModel)]= 'nombre'>
+      <option *ngFor="let nome of book" value="{{nome.isbn}}" > {{nome.name}}</option>
+    </select>
+    <button (click)="pesquisar()"> pesquisar</button>
+    <p>{{name}}</p>
+    </app-modal> 
     <ng-content></ng-content>
   </div>
 </ng-container>
