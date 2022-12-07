@@ -8,17 +8,20 @@ import { AppService } from './app.service';
   styleUrls: ['./app.component.css'] 
 })
 
-export class AppComponent { 
+export class AppComponent implements OnInit { 
   _title = 'APP Component'; 
+
+  book: any[]=[];
+  mostrar: boolean = false;
+  nombre: string;
+  name: Object;
 
   tags: string[] = [];
   selectedTag: string
   linkImage: string;
   statusCode: string;
-
-  constructor(
-    private appService: AppService
-  ) {}
+  private appService: AppService
+  
 
   ngOnInit(): void {
     this.appService.getTags()
@@ -27,9 +30,22 @@ export class AppComponent {
       this.tags = tags;
     });
   }
+  
+  constructor(
+    appService:AppService
+  ) {appService.getTags().subscribe((books)=>
+    this.book=books) }
 
-  consultar() {
-    console.log(this.selectedTag);
-    this.linkImage = 'https://anapioficeandfire.com/api';
+  
+
+ 
+  pesquisar(){
+    this.book.forEach(page => {
+      console.log(page)
+      if(this.nombre == page.isbn){
+        this.name = page['numberOfPages']
+        console.log(this.name)
+      }
+    });
   }
 }

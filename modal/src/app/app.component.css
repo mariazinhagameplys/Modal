@@ -1,0 +1,102 @@
+.body{
+    background-color: #241f1b;
+    border-radius: 7px;
+    height: 500px;
+    width: 800px;
+    position:fixed;
+    left:20%;
+    top:15%;
+}
+.logo{
+    height:65px;
+    position: fixed;
+    left:32%;
+}
+.quote{
+   color: #91624d;
+   font-family: "Calisto MT";
+   position: fixed;
+   left:32%;
+   font-style: italic;
+   top:20%;
+}
+.p{
+    color: #91624d;
+   font-family: "Calisto MT";
+   position: fixed;
+   top:30%;
+   left:25%;
+}
+.baratheon {
+    position: absolute;
+    right:2%;
+    top:0%;
+    height: 300px;
+    width: 200px;
+    border-bottom-right-radius: 110%;
+    border-bottom-left-radius: 110%;
+    background-color: #d6b36a;
+}
+.baratheonLogo{
+    position: absolute;
+    margin-left: 81%;
+    top:0%;
+    height: 250px;
+    z-index: 999;
+}
+.lannister {
+    position: absolute;
+    left:2%;
+    top:0%;
+    height: 300px;
+    width: 200px;
+    border-bottom-right-radius: 110%;
+    border-bottom-left-radius: 110%;
+    background-color: #561411;
+}
+.lannisterLogo{
+    position: absolute;
+    height: 170px;
+    top:15%;
+    left: 16%;
+}
+.button{
+    color: #91624d;
+    background-color: #2c2214;
+    font-family: "Calisto MT";
+    position: fixed;
+    left:45%;
+    top:42%;
+    font-style: italic;
+    height:50px;
+    width: 100px;
+}
+.choice{
+    color: #91624d;
+    background-color: #2c2214;
+    font-family: "Calisto MT";
+    position: fixed;
+    left:30%;
+    top:55%;
+    font-style: italic;
+    height:40px;
+    width: 400px;
+}
+.search{
+    color: #91624d;
+    background-color: #2c2214;
+    font-family: "Calisto MT";
+    position: fixed;
+    left:61%;
+    top:55%;
+    height:40px;
+    width: 100px;
+}
+.pages{
+    font-family: "Calisto MT";
+    color: #91624d;
+    position: fixed;
+    left:40%;
+    top:48%;
+    font-size:150px;
+}

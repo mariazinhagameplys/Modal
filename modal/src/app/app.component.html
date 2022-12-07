@@ -1,4 +1,19 @@
+<img class= "logo" src="https://upload.wikimedia.org/wikipedia/commons/7/70/House-of-the-dragon-logo-2054x300.png">
+<img class="baratheonLogo" src="https://www.pngmart.com/files/4/House-Baratheon-PNG-Image.png">
+<div class="baratheon"></div>
+<div class="lannister">
+    <img class="lannisterLogo" src="https://seeklogo.com/images/L/lannister-logo-7DC5E5A0B5-seeklogo.com.png">
+</div>
 
-<app-modal #modal>
-<img *ngIf="linkImage" [src]="linkImage"/>
-</app-modal> 
+<div class="body">
+    <h3 class="quote">"When you play the game of thrones, you win or you die".</h3>
+    <p class="p">Check in the button bellow the books in the Game Of Thrones Saga and their number of pages</p>
+    <button (click)="modal.aparecer()" class="button"> Show </button>
+    <app-modal #modal>
+        <select class="choice" [(ngModel)]= 'nombre'>
+        <option *ngFor="let nome of book" value="{{nome.isbn}}" > {{nome.name}}</option>
+        </select>
+        <button class="search"  (click)="pesquisar()"> Discover</button>
+        <h1 class="pages">{{name}}</h1>
+    </app-modal> 
+</div>
